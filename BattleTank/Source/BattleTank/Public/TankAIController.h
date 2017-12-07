@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Tank.h"
 #include "AIController.h"
+#include "Engine/World.h"
 #include "TankAIController.generated.h"
 
 /**
@@ -19,7 +20,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
-	ATank* GetAITank() const;
+private:
+	ATank* GetControlledTank() const;
+
+	ATank* GetPlayerTank() const;
 
 };
