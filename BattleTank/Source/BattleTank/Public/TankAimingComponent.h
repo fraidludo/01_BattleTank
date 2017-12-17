@@ -5,10 +5,10 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 #include "TankAimingComponent.generated.h"
 
-// Forward declaration
 class UTankBarrel; 
 
 // Holds barrel's properties and Elevate method

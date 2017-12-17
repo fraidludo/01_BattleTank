@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Engine/World.h"
 #include "TankPlayerController.generated.h" // must be the last include
 
-// Forward declarations
 class ATank;
 
 /**
