@@ -6,15 +6,6 @@
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	auto ControlledTank = GetControlledTank();
-	if (!ControlledTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayController not possesing"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayController possesing : %s"), *ControlledTank->GetName());
-	}
 }
 
 // Called every frame
