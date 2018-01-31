@@ -3,6 +3,7 @@
 #include "TankAimingComponent.h"
 #include "TankTurret.h"
 #include "TankBarrel.h"
+#include "Classes/Engine/World.h"
 #include "Projectile.h"
 
 // Sets default values for this component's properties
@@ -47,7 +48,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	}
 }
 
-int UTankAimingComponent::GetRoundsLeft() const
+int32 UTankAimingComponent::GetRoundsLeft() const
 {
 		return RoundsLeft ;
 }
@@ -78,8 +79,8 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		HitLocation,
 		LaunchSpeed,
 		false,
-		0.f,
-		0.f,
+		0,
+		0,
 		ESuggestProjVelocityTraceOption::DoNotTrace // Paramater must be present to prevent bug
 	);
 
