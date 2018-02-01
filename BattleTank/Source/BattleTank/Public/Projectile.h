@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "PhysicsEngine/RadialForceComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/Actor.h"
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -32,6 +33,9 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category ="Setup")
 	float DestroyDelay = 10.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	float ProjectileDamage = 20.f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UProjectileMovementComponent * ProjectileMovement = nullptr;
