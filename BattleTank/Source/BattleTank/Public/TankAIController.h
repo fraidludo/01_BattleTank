@@ -17,12 +17,17 @@ protected:
 
 	// How close can the AI tank get to the player
 	UPROPERTY(EditDefaultsOnly, Category = "Setup") 
-	float AcceptanceRadius = 800;
+	float AcceptanceRadius = 80;
 
 
 private:
 	virtual void BeginPlay() override;
 
+	virtual void SetPawn(APawn* InPawn) override;
+
 	virtual void Tick(float DeltaSeconds) override;
+
+	UFUNCTION()
+	void OnPossessedTankDeath();
 
 };
